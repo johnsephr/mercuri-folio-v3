@@ -12,7 +12,7 @@ import About from './pages/About/About'
 import Forgive from './pages/Forgive/Forgive'
 import Manic from './pages/Manic/Manic'
 import Lynk from './pages/Lynk/Lynk'
-
+import ToT from './pages/ToT/ToT'
 
 function App() {
   return (
@@ -29,6 +29,9 @@ function App() {
         </Route>
         <Route path="/lynk">
           <Lynk />
+        </Route>
+        <Route path="/tot">
+          <ToT />
         </Route>
         <Route path="/">
           <Home />
