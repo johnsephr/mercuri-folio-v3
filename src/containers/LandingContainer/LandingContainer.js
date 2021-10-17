@@ -27,6 +27,7 @@ const LandingContainer = props => {
                     src={starVariant === "dark" ? starDark : starLight}
                     alt="Northern star icon"
                 />
+                {/* about link */}
                 <div className="flex items-center"><Link className="text-xl" to="/about">About</Link></div>
             </div>
 

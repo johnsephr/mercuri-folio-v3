@@ -4,6 +4,7 @@
 
 html {
     background: #F8F8F8;
+    font-family: 'EB Garamond', serif;
 }
 
 @layer utilities {

@@ -5,15 +5,17 @@ import React from "react";
 import LandingContainer from "../../containers/LandingContainer/LandingContainer";
 import HomeBanner from "../../components/LandingBanners/HomeBanner";
 
+import ProjectListContainer from "../../containers/ProjectListContainer/ProjectListContainer";
+
 import homeLandingImage from "../../assets/images/landings/tot.png"
 
 const Home = () => {
   return (
     <div>
       {/* landing image */}
-      <div className="absolute top-0" style={{ height: '100vh', zIndex: 0 }}>
+      {/* <div className="absolute top-0" style={{ height: '100vh', zIndex: 0 }}>
         <img src={homeLandingImage} />
-      </div>
+      </div> */}
         <LandingContainer
           logoVariant="dark"
           starVariant="dark"
@@ -23,6 +25,7 @@ const Home = () => {
         </LandingContainer>
 
         {/* rest of page content here... */}
+        <ProjectListContainer />
     </div>
   );
 }
