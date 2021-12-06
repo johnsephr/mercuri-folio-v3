@@ -1,23 +1,21 @@
 import React from "react";
 
 // file imports
-import RootContainer from "../../containers/RootContainer";
+import RootBannerContainer from "../../containers/RootBannerContainer";
 import LandingContainer from "../../containers/LandingContainer/LandingContainer";
 import ForgiveBanner from "../../components/LandingBanners/ForgiveBanner";
 
 const Forgive = () => {
   return (
     <div>
-        <RootContainer>
+        <RootBannerContainer>
           <LandingContainer
             logoVariant="dark"
             starVariant="dark"
           >
             <ForgiveBanner />
           </LandingContainer>
-
-          
-        </RootContainer>
+        </RootBannerContainer>
     </div>
   );
 }

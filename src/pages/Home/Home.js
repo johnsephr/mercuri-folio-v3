@@ -1,7 +1,7 @@
 import React from "react";
 
 // file imports
-import RootContainer from "../../containers/RootContainer";
+import RootBannerContainer from "../../containers/RootBannerContainer";
 import LandingContainer from "../../containers/LandingContainer/LandingContainer";
 import HomeBanner from "../../components/LandingBanners/HomeBanner";
 
@@ -12,7 +12,7 @@ import homeLandingImage from "../../assets/images/landings/tot.png"
 const Home = () => {
   return (
     <div>
-      <RootContainer>
+      <RootBannerContainer>
         <LandingContainer
           logoVariant="dark"
           starVariant="dark"
@@ -21,9 +21,9 @@ const Home = () => {
           <HomeBanner />
         </LandingContainer>
 
-        {/* rest of page content here... */}
         <ProjectListContainer />
-      </RootContainer>
+      </RootBannerContainer>
+      {/* rest of page content here... */}
     </div>
   );
 }

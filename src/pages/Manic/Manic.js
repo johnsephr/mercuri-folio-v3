@@ -1,23 +1,21 @@
 import React from "react";
 
 // file imports
-import RootContainer from "../../containers/RootContainer";
+import RootBannerContainer from "../../containers/RootBannerContainer";
 import LandingContainer from "../../containers/LandingContainer/LandingContainer";
 import ManicBanner from "../../components/LandingBanners/ManicBanner";
 
 const Manic = () => {
   return (
     <div>
-         <RootContainer>
+         <RootBannerContainer>
           <LandingContainer
             logoVariant="dark"
             starVariant="dark"
           >
             <ManicBanner />
           </LandingContainer>
-
-          
-        </RootContainer>
+        </RootBannerContainer>
     </div>
   );
 }

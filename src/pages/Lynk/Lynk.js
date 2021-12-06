@@ -1,21 +1,21 @@
 import React from "react";
 
 // file imports
-import RootContainer from "../../containers/RootContainer";
+import RootBannerContainer from "../../containers/RootBannerContainer";
 import LandingContainer from "../../containers/LandingContainer/LandingContainer";
 import LynkBanner from "../../components/LandingBanners/LynkBanner";
 
 const Lynk = () => {
   return (
     <div>
-      <RootContainer>
+      <RootBannerContainer>
         <LandingContainer
           logoVariant="light"
           starVariant="light"
         >
           <LynkBanner />
         </LandingContainer>
-        
+
       {/* page content */}
 
       <p>
@@ -27,7 +27,7 @@ const Lynk = () => {
 
         A design/brand guideline was created to fully flesh out the company idea besides a mock website.
       </p>
-      </RootContainer>
+      </RootBannerContainer>
     </div>
   );
 }

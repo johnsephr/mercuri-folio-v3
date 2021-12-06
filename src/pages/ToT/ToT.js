@@ -1,20 +1,22 @@
 import React from "react";
 
 // file imports
-import RootContainer from "../../containers/RootContainer";
+import RootBannerContainer from "../../containers/RootBannerContainer";
 import LandingContainer from "../../containers/LandingContainer/LandingContainer";
 import ToTBanner from "../../components/LandingBanners/ToTBanner";
 
 const ToT = () => {
   return (
     <div>
-      <RootContainer>
+      <RootBannerContainer>
+        shit
         <LandingContainer
           logoVariant="dark"
           starVariant="dark"
         >
           <ToTBanner />
         </LandingContainer>
+      </RootBannerContainer>
 
         {/* page content */}
 
@@ -28,7 +30,6 @@ const ToT = () => {
           by Deafhaven; we renewed the presence of the music blog incorporating the unique characteristics from each angle into
           the bold new era and visual edge.
         </p>
-      </RootContainer>
     </div>
   );
 }
