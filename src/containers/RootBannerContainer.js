@@ -1,7 +1,5 @@
 import React from "react";
 
-import tot from '../assets/images/landings/tot.png'
-
 const RootBannerContainer = props => {
   return (
 
