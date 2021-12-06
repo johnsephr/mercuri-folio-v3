@@ -28,7 +28,7 @@ const LandingContainer = props => {
                     alt="Northern star icon"
                 />
                 {/* about link */}
-                <div className="flex items-center"><Link className="text-xl" to="/about">About</Link></div>
+                <div className="flex items-center"><Link className="text-xl" style={logoVariant === "light" ? {color: '#fff'} : {}} to="/about">About</Link></div>
             </div>
 
             {/* landing banner */}
