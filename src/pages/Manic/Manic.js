@@ -15,6 +15,8 @@ const Manic = () => {
           >
             <ManicBanner />
           </LandingContainer>
+
+          
         </RootContainer>
     </div>
   );
