@@ -8,8 +8,7 @@ import ToTBanner from "../../components/LandingBanners/ToTBanner";
 const ToT = () => {
   return (
     <div>
-      <RootBannerContainer>
-        shit
+      <RootBannerContainer tot={true}>
         <LandingContainer
           logoVariant="dark"
           starVariant="dark"

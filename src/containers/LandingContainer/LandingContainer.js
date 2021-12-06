@@ -16,19 +16,21 @@ const LandingContainer = props => {
             {/* navbar */}
             <div className="w-full flex justify-between pt-8">
                 {/* logo */}
-                <img
-                    // className="pl-12"
-                    src={logoVariant === "dark" ? customLogoDark : customLogoLight}
-                    alt="Michelle Gorski's custom logo"
-                />
+                <Link to="/">
+                    <img
+                        // className="pl-12"
+                        src={logoVariant === "dark" ? customLogoDark : customLogoLight}
+                        alt="Michelle Gorski's custom logo"
+                    />
+                </Link>
                 {/* star */}
-                <img 
+                <img
                     // className=""
                     src={starVariant === "dark" ? starDark : starLight}
                     alt="Northern star icon"
                 />
                 {/* about link */}
-                <div className="flex items-center"><Link className="text-xl" style={logoVariant === "light" ? {color: '#fff'} : {}} to="/about">About</Link></div>
+                <div className="flex items-center"><Link className="text-xl" style={logoVariant === "light" ? { color: '#fff' } : {}} to="/about">About</Link></div>
             </div>
 
             {/* landing banner */}

@@ -8,13 +8,14 @@ import LynkBanner from "../../components/LandingBanners/LynkBanner";
 const Lynk = () => {
   return (
     <div>
-      <RootBannerContainer>
+      <RootBannerContainer lynk={true}>
         <LandingContainer
           logoVariant="light"
           starVariant="light"
         >
           <LynkBanner />
         </LandingContainer>
+      </RootBannerContainer>
 
       {/* page content */}
 
@@ -27,7 +28,6 @@ const Lynk = () => {
 
         A design/brand guideline was created to fully flesh out the company idea besides a mock website.
       </p>
-      </RootBannerContainer>
     </div>
   );
 }

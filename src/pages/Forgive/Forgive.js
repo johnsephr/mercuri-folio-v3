@@ -8,7 +8,7 @@ import ForgiveBanner from "../../components/LandingBanners/ForgiveBanner";
 const Forgive = () => {
   return (
     <div>
-        <RootBannerContainer>
+        <RootBannerContainer forgive={true}>
           <LandingContainer
             logoVariant="dark"
             starVariant="dark"

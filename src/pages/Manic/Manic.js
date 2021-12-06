@@ -8,7 +8,7 @@ import ManicBanner from "../../components/LandingBanners/ManicBanner";
 const Manic = () => {
   return (
     <div>
-         <RootBannerContainer>
+         <RootBannerContainer manic={true}>
           <LandingContainer
             logoVariant="dark"
             starVariant="dark"
