@@ -8,6 +8,10 @@ module.exports = {
        'landing-forgive': "url('/src/assets/images/landings/forgive.jpg')",
        'landing-lynk': "url('/src/assets/images/landings/lynk.jpg')",
        'landing-manic': "url('/src/assets/images/landings/manic.jpg')",
+       'project-tot': "url('/src/assets/images/landings/tot.png')",
+       'project-forgive': "url('/src/assets/images/posters/forgive/forgive.jpg')",
+       'project-lynk': "url('/src/assets/images/landings/lynk.jpg')",
+       'project-manic': "url('/src/assets/images/landings/manic.jpg')",
       })
     }
   },
