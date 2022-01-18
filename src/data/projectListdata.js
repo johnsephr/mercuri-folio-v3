@@ -9,7 +9,7 @@ const projectList = [
     },
     {
         name: 'Forgive Poster Series',
-        imgUrl: '../assets/images/landings/forgive.jpg',
+        imgUrl: '../assets/images/landings/forgive_1.jpg',
         url: '/forgive',
         bannerUrl: 'bg-landing-forgive',
         projectUrl: 'bg-project-forgive',

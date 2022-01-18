@@ -5,17 +5,32 @@ import RootBannerContainer from "../../containers/RootBannerContainer";
 import LandingContainer from "../../containers/LandingContainer/LandingContainer";
 import ForgiveBanner from "../../components/LandingBanners/ForgiveBanner";
 
+import ForgiveListContainer from "../../containers/ForgiveListContainer/ForgiveListContainer";
+
 const Forgive = () => {
   return (
     <div>
-        <RootBannerContainer forgive={true}>
-          <LandingContainer
-            logoVariant="dark"
-            starVariant="dark"
-          >
-            <ForgiveBanner />
-          </LandingContainer>
-        </RootBannerContainer>
+      <RootBannerContainer forgive={true}>
+        <LandingContainer
+          logoVariant="dark"
+          starVariant="dark"
+        >
+          <ForgiveBanner />
+        </LandingContainer>
+      </RootBannerContainer>
+
+      {/* page content} */}
+      <div style={{
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        paddingTop: '5rem',
+        paddingBottom: '5rem',
+        maxWidth: '1050px'
+      }}>
+        
+        <ForgiveListContainer />
+
+      </div>
     </div>
   );
 }
