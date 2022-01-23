@@ -16,7 +16,6 @@ const ProjectListContainer = props => {
     return (
         <div className="grid grid-cols-2 gap-8 p-48">
             {projectList.map((project, index) => {
-                console.log(project)
                 return <div
                     key={index}
                     className={`${project.projectUrl} h-96 flex`}

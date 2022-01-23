@@ -1,17 +1,23 @@
 import React from "react";
 
-import forgiveList from "../../data/forgiveListData";
+// images
+import forgive_1 from '../../assets/images/posters/forgive/forgive_1.jpg'
+import forgive_2 from '../../assets/images/posters/forgive/forgive_2.jpg'
+import forgive_3 from '../../assets/images/posters/forgive/forgive_3.jpg'
+
+// imgArr
+const forgiveImgList = [forgive_1, forgive_2, forgive_3]
 
 const ForgiveListContainer = props => {
     return (
         <div className="grid ">
-            {forgiveList.map((poster, index) => {
-                console.log(poster)
+            {forgiveImgList.map((img, index) => {
                 return <div
                     className=''
                     style={{}}
+                    key={index}
                 >
-                    <img key={index} url={poster.url} />
+                    <img src={img} />
                 </div>
             })}
         </div>
