@@ -10,7 +10,7 @@ import starDark from "../../assets/icons/star/darkstar.svg"
 import starLight from "../../assets/icons/star/lightstar.svg"
 
 const LandingContainer = props => {
-    const { logoVariant, starVariant } = props;
+    const { logoVariant, starVariant, landingContainerStyles } = props;
     return (
         <div className="flex flex-col h-screen root-paddings">
             {/* navbar */}
@@ -34,7 +34,7 @@ const LandingContainer = props => {
             </div>
 
             {/* landing banner */}
-            <div className="h-5/6">
+            <div className="h-5/6 flex">
                 {props.children}
             </div>
         </div>
