@@ -34,7 +34,7 @@ const LandingContainer = props => {
             </div>
 
             {/* landing banner */}
-            <div className={aboutPage ? 'flex' : 'h-5/6 flex'}>
+            <div className={aboutPage ? 'flex flex-col' : 'h-5/6 flex'}>
                 {props.children}
             </div>
         </div>

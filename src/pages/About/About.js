@@ -4,6 +4,7 @@ import React from "react";
 import RootBannerContainer from "../../containers/RootBannerContainer";
 import LandingContainer from "../../containers/LandingContainer/LandingContainer";
 import Modal from '../../components/Modal';
+import Footer from '../../components/Footer';
 
 import aboutImg from '../../assets/images/aboutimage.jpg'
 
@@ -46,9 +47,9 @@ const About = () => {
               <Modal />
             </div>
           </div>
-
         </LandingContainer>
       </RootBannerContainer>
+      <Footer />
     </div>
   );
 }

@@ -13,6 +13,10 @@ module.exports = {
        'project-lynk': "url('/src/assets/images/landings/lynk.jpg')",
        'project-manic': "url('/src/assets/images/landings/manic.jpg')",
       })
+    },
+    colors: {
+      'footer-grey': '#C4C4C4',
+      'footer-icon-grey': '#636363',
     }
   },
   variants: {
