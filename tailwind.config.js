@@ -17,6 +17,7 @@ module.exports = {
     colors: {
       'footer-grey': '#C4C4C4',
       'footer-icon-grey': '#636363',
+      'footer-icon-grey-hover': '#2C2828'
     }
   },
   variants: {
