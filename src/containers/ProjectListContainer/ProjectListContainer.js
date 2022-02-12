@@ -3,32 +3,26 @@ import { Link } from "react-router-dom";
 
 import projectList from "../../data/projectListData";
 
-// // custom logo
-// import customLogoDark from "../../assets/icons/logo (63x111)/Logo-Dark.svg";
-// import customLogoLight from "../../assets/icons/logo (63x111)/Logo-Light.svg";
-
-// // star icon
-// import starDark from "../../assets/icons/star/darkstar.svg"
-// import starLight from "../../assets/icons/star/lightstar.svg"
-
 const ProjectListContainer = props => {
     const { logoVariant, starVariant } = props;
     return (
-        <div className="grid grid-cols-2 gap-8 p-48">
+        <div className="grid grid-cols-2 gap-8 m-auto w-4/5">
             {projectList.map((project, index) => {
                 return <div
                     key={index}
-                    className={`${project.projectUrl} h-96 flex`}
+                    className={`${project.projectUrl} flex justify-self-center`}
                     style={{
                         backgroundPosition: 'center center',
-                        backgroundSize: 'cover'
+                        backgroundSize: 'cover',
+                        height: '30vw',
+                        width: '30vw',
                     }}
                 >
-                    <Link className="h-full w-full z-50" to={project.url}>{project.name}</Link>
+                    <Link className="h-full w-full z-50" to={project.url} />
                 </div>
             })}
 
-        </div>
+        </div >
     );
 }
 
