@@ -14,30 +14,36 @@ import Manic from './pages/Manic/Manic'
 import Lynk from './pages/Lynk/Lynk'
 import ToT from './pages/ToT/ToT'
 
+// HOC
+import ScrollToTop from '../src/HOCs/ScrollToTop';
+
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/forgive">
-          <Forgive />
-        </Route>
-        <Route path="/manic">
-          <Manic />
-        </Route>
-        <Route path="/lynk">
-          <Lynk />
-        </Route>
-        <Route path="/tot">
-          <ToT />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-  </Router>
+      <ScrollToTop>
+
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/forgive">
+            <Forgive />
+          </Route>
+          <Route path="/manic">
+            <Manic />
+          </Route>
+          <Route path="/lynk">
+            <Lynk />
+          </Route>
+          <Route path="/tot">
+            <ToT />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </ScrollToTop>
+    </Router>
   );
 }
 
