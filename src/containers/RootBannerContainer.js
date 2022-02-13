@@ -1,14 +1,20 @@
 import React from "react";
 
 const RootBannerContainer = props => {
+  const { tot, lynk, manic, forgive } = props;
   return (
-
-    <div className={props.tot ? 'bg-landing-tot'
-      : props.lynk ? 'bg-landing-lynk'
-        : props.manic ? 'bg-landing-manic'
-          : props.forgive ? 'bg-landing-forgive'
+    <div className={tot ? 'bg-landing-tot'
+      : lynk ? 'bg-landing-lynk'
+        : manic ? 'bg-landing-manic'
+          : forgive ? 'bg-landing-forgive'
             : ''}
-      style={{
+      style={tot ? {
+        paddingLeft: '5vw',
+        paddingRight: '5vw',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+        backgroundSize: '105% 105%'
+      } : {
         paddingLeft: '5vw',
         paddingRight: '5vw',
         backgroundPosition: 'center center',

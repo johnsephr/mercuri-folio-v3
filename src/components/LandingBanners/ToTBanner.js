@@ -1,6 +1,6 @@
 import React from "react";
 
-const HomeBanner = () => {
+const ToTBanner = () => {
   return (
     <div className="h-full w-full grid pt-12">
         <p className="text-xl text-left row-span-1 w-full italic" style={{color: 'white'}}>Creative Direction --- Branding Identity --- Design System</p>
@@ -14,4 +14,4 @@ const HomeBanner = () => {
   );
 }
 
-export default HomeBanner;
+export default ToTBanner;

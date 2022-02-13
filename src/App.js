@@ -21,7 +21,6 @@ function App() {
   return (
     <Router>
       <ScrollToTop>
-
         <Switch>
           <Route path="/about">
             <About />
