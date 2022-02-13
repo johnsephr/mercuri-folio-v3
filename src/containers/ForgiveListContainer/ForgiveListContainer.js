@@ -10,14 +10,17 @@ const forgiveImgList = [forgive_1, forgive_2, forgive_3]
 
 const ForgiveListContainer = props => {
     return (
-        <div className="grid ">
+        <div className="grid flex justify-center">
             {forgiveImgList.map((img, index) => {
                 return <div
                     className=''
-                    style={{}}
+                    style={{
+                        width: '40vw',
+                        margin: '4rem 0'
+                    }}
                     key={index}
                 >
-                    <img src={img} />
+                    <img className="w-full" src={img} />
                 </div>
             })}
         </div>
