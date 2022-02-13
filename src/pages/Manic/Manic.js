@@ -22,8 +22,7 @@ const Manic = () => {
         <div style={{
         marginLeft: 'auto',
         marginRight: 'auto',
-        paddingTop: '5rem',
-        paddingBottom: '5rem',
+        padding: '4rem 0',
         maxWidth: '1050px'
       }}>
         

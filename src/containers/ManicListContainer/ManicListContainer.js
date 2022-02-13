@@ -10,14 +10,17 @@ const manicImgList = [manic_1, manic_2, manic_3]
 
 const ManicListContainer = props => {
     return (
-        <div className="grid ">
+        <div className="grid flex justify-center">
             {manicImgList.map((img, index) => {
                 return <div
                     className=''
-                    style={{}}
+                    style={{
+                        width: '40vw',
+                        margin: '4rem 0'
+                    }}
                     key={index}
                 >
-                    <img src={img} />
+                    <img className="w-full" src={img} />
                 </div>
             })}
         </div>
