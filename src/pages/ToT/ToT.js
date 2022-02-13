@@ -34,10 +34,7 @@ const ToT = () => {
       }}>
         <OverlapRL imageL={loFiIcons} imageR={hiFiIcons} />
 
-        <p style={{
-          marginTop: '5rem',
-          marginBottom: '5rem'
-        }}>
+        <p style={{margin: '5rem 0'}}>
           Tunnel of Trees describes their existence as, <span className="italic">“a music blog dedicated to taking music and turning it into a serious
           conversation about creation, expression, and authenticity.”</span> While working with them over the course of a few months,
           I can gladly attest to their sentiment being authentic.<br />

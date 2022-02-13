@@ -23,8 +23,7 @@ const Forgive = () => {
       <div style={{
         marginLeft: 'auto',
         marginRight: 'auto',
-        paddingTop: '4rem',
-        paddingBottom: '5rem',
+        padding: '4rem 0',
         maxWidth: '1050px'
       }}>
         
