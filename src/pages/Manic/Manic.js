@@ -5,8 +5,10 @@ import RootBannerContainer from "../../containers/RootBannerContainer";
 import LandingContainer from "../../containers/LandingContainer/LandingContainer";
 import ManicBanner from "../../components/LandingBanners/ManicBanner";
 import ManicListContainer from "../../containers/ManicListContainer/ManicListContainer";
+import FooterNav from "../../components/FooterNav";
 
-const Manic = () => {
+const Manic = props => {
+    const { next, prev } = props;
   return (
     <div>
          <RootBannerContainer manic={true}>
@@ -25,10 +27,11 @@ const Manic = () => {
         padding: '4rem 0',
         maxWidth: '1050px'
       }}>
-        
         <ManicListContainer />
-
       </div>
+
+      {/* FooterNav */}
+      <FooterNav prev={prev} />
     </div>
   );
 }

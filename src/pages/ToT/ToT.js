@@ -6,6 +6,7 @@ import LandingContainer from "../../containers/LandingContainer/LandingContainer
 import ToTBanner from "../../components/LandingBanners/ToTBanner";
 import OverlapRL from "../../containers/ImageContainer/OverlapRL";
 import SideBySide from "../../containers/ImageContainer/SideBySide";
+import FooterNav from "../../components/FooterNav";
 
 // img imports
 import loFiIcons from "../../assets/images/ToT/lofi-icons.jpg";
@@ -13,7 +14,8 @@ import hiFiIcons from "../../assets/images/ToT/hifi-icons.jpg";
 import socialPost from "../../assets/images/ToT/previewsocialpost.jpg";
 import previewInsta from "../../assets/images/ToT/preview-insta.jpeg";
 
-const ToT = () => {
+const ToT = props => {
+  const { next } = props;
   return (
     <div>
       <RootBannerContainer tot={true}>
@@ -47,6 +49,9 @@ const ToT = () => {
 
         <SideBySide imageL={socialPost} imageR={previewInsta} />
       </div>
+
+      {/* FooterNav */}
+      <FooterNav next={next} />
     </div>
   );
 }

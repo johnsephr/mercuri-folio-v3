@@ -5,7 +5,7 @@ const projectList = [
         url: '/tot',
         bannerUrl: 'bg-landing-tot',
         projectUrl: 'bg-project-tot',
-        roles: ['Creative Direction', 'Branding Identity', 'Design System']
+        roles: ['Creative Direction', 'Branding Identity', 'Design System'],
     },
     {
         name: 'Forgive Poster Series',
@@ -13,7 +13,7 @@ const projectList = [
         url: '/forgive',
         bannerUrl: 'bg-landing-forgive',
         projectUrl: 'bg-project-forgive',
-        roles: ['Concept Development']
+        roles: ['Concept Development'],
     },
     {
         name: 'Lynk Project',
@@ -21,7 +21,7 @@ const projectList = [
         url: '/lynk',
         bannerUrl: 'bg-landing-lynk',
         projectUrl: 'bg-project-lynk',
-        roles: ['Concept Development']
+        roles: ['Concept Development'],
     },
     {
         name: 'Manic Poster Series',
@@ -29,7 +29,7 @@ const projectList = [
         url: '/manic',
         bannerUrl: 'bg-landing-manic',
         projectUrl: 'bg-project-manic',
-        roles: ['Concept Development']
+        roles: ['Concept Development'],
     },
 ]
 

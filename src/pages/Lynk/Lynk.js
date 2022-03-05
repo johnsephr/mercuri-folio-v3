@@ -6,6 +6,7 @@ import LandingContainer from "../../containers/LandingContainer/LandingContainer
 import LynkBanner from "../../components/LandingBanners/LynkBanner";
 import OverlapRL from "../../containers/ImageContainer/OverlapRL";
 import OverlapLR from "../../containers/ImageContainer/OverlapLR";
+import FooterNav from "../../components/FooterNav";
 
 // imgs
 import lynk_sketch from '../../assets/images/lynk/lynk_sketch.jpg'
@@ -13,7 +14,8 @@ import lynk_laptop from '../../assets/images/lynk/lynk_laptop.png'
 import lynk_guide from '../../assets/images/lynk/lynk_guide.jpg'
 import lynk_banner_copy from '../../assets/images/lynk/lynk_copy.jpg'
 
-const Lynk = () => {
+const Lynk = props => {
+  const { next, prev } = props;
   return (
     <div>
       <RootBannerContainer lynk={true}>
@@ -33,9 +35,9 @@ const Lynk = () => {
         maxWidth: '1050px'
       }}>
 
-      <OverlapRL imageL={lynk_sketch} imageR={lynk_guide} />
+        <OverlapRL imageL={lynk_sketch} imageR={lynk_guide} />
 
-        <p style={{margin: '5rem 0'}}>
+        <p style={{ margin: '5rem 0' }}>
           ‘LYNK’ was created to be an imaginary visual and marketing creative agency.
           Specializing web/mobile design and development. Providing anything needed to successfully build
           and run a brand with, including: content writing, advertising analytics, SEO services. A company
@@ -47,6 +49,9 @@ const Lynk = () => {
 
         <OverlapLR imageL={lynk_laptop} imageR={lynk_banner_copy} />
       </div>
+
+      {/* FooterNav */}
+      <FooterNav next={next} prev={prev} />
     </div>
   );
 }

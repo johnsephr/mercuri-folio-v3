@@ -4,10 +4,11 @@ import React from "react";
 import RootBannerContainer from "../../containers/RootBannerContainer";
 import LandingContainer from "../../containers/LandingContainer/LandingContainer";
 import ForgiveBanner from "../../components/LandingBanners/ForgiveBanner";
-
 import ForgiveListContainer from "../../containers/ForgiveListContainer/ForgiveListContainer";
+import FooterNav from "../../components/FooterNav";
 
-const Forgive = () => {
+const Forgive = props => {
+  const { next, prev } = props;
   return (
     <div>
       <RootBannerContainer forgive={true}>
@@ -26,10 +27,11 @@ const Forgive = () => {
         padding: '4rem 0',
         maxWidth: '1050px'
       }}>
-        
         <ForgiveListContainer />
-
       </div>
+
+      {/* FooterNav */}
+      <FooterNav next={next} prev={prev} />
     </div>
   );
 }

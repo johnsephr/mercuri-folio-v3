@@ -22,20 +22,20 @@ function App() {
     <Router>
       <ScrollToTop>
         <Switch>
-          <Route path="/about">
-            <About />
+          <Route path="/tot">
+            <ToT next='/forgive' />
           </Route>
           <Route path="/forgive">
-            <Forgive />
-          </Route>
-          <Route path="/manic">
-            <Manic />
+            <Forgive next='/lynk' prev='/tot' />
           </Route>
           <Route path="/lynk">
-            <Lynk />
+            <Lynk next='/manic' prev='/forgive' />
           </Route>
-          <Route path="/tot">
-            <ToT />
+          <Route path="/manic">
+            <Manic prev='/lynk' />
+          </Route>
+          <Route path="/about">
+            <About />
           </Route>
           <Route path="/">
             <Home />
