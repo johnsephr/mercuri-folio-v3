@@ -19,6 +19,7 @@ const Footer = () => {
                 <a
                     href='https://www.instagram.com/dewdrenched/?utm_medium=copy_link'
                     target="_blank"
+                    rel="noreferrer"
                     className={`text-3xl ${hoverIG ? 'text-footer-icon-grey-hover' : ''}`}
                     onMouseEnter={() => setHoverIG(true)}
                     onMouseLeave={() => setHoverIG(false)}
@@ -29,6 +30,7 @@ const Footer = () => {
                 <a
                     href='https://www.linkedin.com/in/michelle-gorski-78a5b9179/'
                     target="_blank"
+                    rel="noreferrer"
                     className={`px-8 text-3xl ${hoverLI ? 'text-footer-icon-grey-hover' : ''}`}
                     onMouseEnter={() => setHoverLI(true)}
                     onMouseLeave={() => setHoverLI(false)}
@@ -39,6 +41,7 @@ const Footer = () => {
                 <a
                     href='https://www.behance.net/mchllgorski'
                     target="_blank"
+                    rel="noreferrer"
                     className={`text-3xl ${hoverBH ? 'text-footer-icon-grey-hover' : ''}`}
                     onMouseEnter={() => setHoverBH(true)}
                     onMouseLeave={() => setHoverBH(false)}

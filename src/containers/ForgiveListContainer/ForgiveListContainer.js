@@ -20,7 +20,7 @@ const ForgiveListContainer = props => {
                     }}
                     key={index}
                 >
-                    <img className="w-full" src={img} />
+                    <img className="w-full" src={img} alt="forgive project img" />
                 </div>
             })}
         </div>

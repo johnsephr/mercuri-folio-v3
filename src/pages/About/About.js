@@ -26,7 +26,7 @@ const About = () => {
                 borderTop: '1px solid #333',
                 borderBottom: '1px solid #333',
               }}>
-                <img className='w-1/2' src={aboutImg} />
+                <img className='w-1/2' src={aboutImg} alt="michelle" />
                 <div className='w-1/2 pl-8 flex justify-between flex-col'>
                   <p className='italic text-xl'>About</p>
                   <p className='text-2xl'>Hello, I'm Michelle.</p>

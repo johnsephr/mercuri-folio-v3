@@ -20,7 +20,7 @@ const ManicListContainer = props => {
                     }}
                     key={index}
                 >
-                    <img className="w-full" src={img} />
+                    <img className="w-full" src={img} alt="manic" />
                 </div>
             })}
         </div>
