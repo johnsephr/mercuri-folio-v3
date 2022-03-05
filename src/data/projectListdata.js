@@ -25,7 +25,7 @@ const projectList = [
     },
     {
         name: 'Manic Poster Series',
-        imgUrl: '../assets/images/landings/manic.jpg',
+        imgUrl: '../assets/images/landings/manic.png',
         url: '/manic',
         bannerUrl: 'bg-landing-manic',
         projectUrl: 'bg-project-manic',

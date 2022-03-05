@@ -7,11 +7,11 @@ module.exports = {
        'landing-tot': "url('/src/assets/images/landings/tot.png')",
        'landing-forgive': "url('/src/assets/images/landings/forgive.jpg')",
        'landing-lynk': "url('/src/assets/images/landings/lynk.jpg')",
-       'landing-manic': "url('/src/assets/images/landings/manic.jpg')",
-       'project-tot': "url('/src/assets/images/landings/tot.png')",
+       'landing-manic': "url('/src/assets/images/landings/manic.png')",
+       'project-tot': "url('/src/assets/images/ToT/tot_project.png')",
        'project-forgive': "url('/src/assets/images/posters/forgive/forgive_1.jpg')",
-       'project-lynk': "url('/src/assets/images/landings/lynk.jpg')",
-       'project-manic': "url('/src/assets/images/landings/manic.jpg')",
+       'project-lynk': "url('/src/assets/images/lynk/lynk_project.png')",
+       'project-manic': "url('/src/assets/images/posters/manic/manic_project.png')",
       })
     },
     colors: {
