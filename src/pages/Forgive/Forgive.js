@@ -8,7 +8,8 @@ import ForgiveListContainer from "../../containers/ForgiveListContainer/ForgiveL
 import FooterNav from "../../components/FooterNav";
 
 const Forgive = props => {
-  const { next, prev } = props;
+  const { data } = props;
+  const { next, nextText, prev, prevText } = data;
   return (
     <div>
       <RootBannerContainer forgive={true}>
@@ -31,7 +32,13 @@ const Forgive = props => {
       </div>
 
       {/* FooterNav */}
-      <FooterNav next={next} prev={prev} />
+      <FooterNav
+        next={next}
+        prev={prev}
+        nextText={nextText}
+        prevText={prevText}
+        dark
+      />
     </div>
   );
 }

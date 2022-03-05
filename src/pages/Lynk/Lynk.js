@@ -15,7 +15,8 @@ import lynk_guide from '../../assets/images/lynk/lynk_guide.jpg'
 import lynk_banner_copy from '../../assets/images/lynk/lynk_copy.jpg'
 
 const Lynk = props => {
-  const { next, prev } = props;
+  const { data } = props;
+  const { next, prev, nextText, prevText } = data;
   return (
     <div>
       <RootBannerContainer lynk={true}>
@@ -51,7 +52,13 @@ const Lynk = props => {
       </div>
 
       {/* FooterNav */}
-      <FooterNav next={next} prev={prev} />
+      <FooterNav
+        next={next}
+        prev={prev}
+        nextText={nextText}
+        prevText={prevText}
+        dark
+      />
     </div>
   );
 }

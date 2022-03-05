@@ -17,22 +17,26 @@ import ToT from './pages/ToT/ToT'
 // HOC
 import ScrollToTop from '../src/HOCs/ScrollToTop';
 
+// data
+import projectNavData from './data/projectNavData';
+
 function App() {
+  const { tot, forgive, lynk, manic } = projectNavData;
   return (
     <Router>
       <ScrollToTop>
         <Switch>
           <Route path="/tot">
-            <ToT next='/forgive' />
+            <ToT data={tot} />
           </Route>
           <Route path="/forgive">
-            <Forgive next='/lynk' prev='/tot' />
+            <Forgive data={forgive} />
           </Route>
           <Route path="/lynk">
-            <Lynk next='/manic' prev='/forgive' />
+            <Lynk data={lynk} />
           </Route>
           <Route path="/manic">
-            <Manic prev='/lynk' />
+            <Manic data={manic} />
           </Route>
           <Route path="/about">
             <About />

@@ -15,7 +15,8 @@ import socialPost from "../../assets/images/ToT/previewsocialpost.jpg";
 import previewInsta from "../../assets/images/ToT/preview-insta.jpeg";
 
 const ToT = props => {
-  const { next } = props;
+  const { data } = props;
+  const { next, nextText } = data;
   return (
     <div>
       <RootBannerContainer tot={true}>
@@ -36,9 +37,9 @@ const ToT = props => {
       }}>
         <OverlapRL imageL={loFiIcons} imageR={hiFiIcons} />
 
-        <p style={{margin: '5rem 0'}}>
+        <p style={{ margin: '5rem 0' }}>
           <span className="font-bold"><a href="https://tunneloftrees.co/" target="_blank" rel="noreferrer">Tunnel of Trees</a></span> describes their existence as, <span className="italic">“a music blog dedicated to taking music and turning it into a serious
-          conversation about creation, expression, and authenticity.”</span> While working with them over the course of a few months,
+            conversation about creation, expression, and authenticity.”</span> While working with them over the course of a few months,
           I can gladly attest to their sentiment being authentic.<br />
           <br />
           We worked together to rebrand the new visions they were bringing to their comeback from a few year hiatus.
@@ -51,7 +52,11 @@ const ToT = props => {
       </div>
 
       {/* FooterNav */}
-      <FooterNav next={next} />
+      <FooterNav
+        next={next}
+        nextText={nextText}
+        dark
+      />
     </div>
   );
 }

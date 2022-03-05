@@ -8,20 +8,21 @@ import ManicListContainer from "../../containers/ManicListContainer/ManicListCon
 import FooterNav from "../../components/FooterNav";
 
 const Manic = props => {
-    const { next, prev } = props;
+  const { data } = props;
+  const { prev, prevText } = data;
   return (
     <div>
-         <RootBannerContainer manic={true}>
-          <LandingContainer
-            logoVariant="dark"
-            starVariant="dark"
-          >
-            <ManicBanner />
-          </LandingContainer>
-        </RootBannerContainer>
+      <RootBannerContainer manic={true}>
+        <LandingContainer
+          logoVariant="dark"
+          starVariant="dark"
+        >
+          <ManicBanner />
+        </LandingContainer>
+      </RootBannerContainer>
 
-        {/* page content */}
-        <div style={{
+      {/* page content */}
+      <div style={{
         marginLeft: 'auto',
         marginRight: 'auto',
         padding: '4rem 0',
@@ -31,7 +32,11 @@ const Manic = props => {
       </div>
 
       {/* FooterNav */}
-      <FooterNav prev={prev} />
+      <FooterNav
+        prev={prev}
+        prevText={prevText}
+        dark
+      />
     </div>
   );
 }
