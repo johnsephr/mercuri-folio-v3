@@ -8,7 +8,7 @@ const RootBannerContainer = props => {
         : manic ? 'bg-landing-manic'
           : forgive ? 'bg-landing-forgive'
             : ''}
-      style={tot ? {
+      style={tot || manic ? {
         paddingLeft: '5vw',
         paddingRight: '5vw',
         backgroundPosition: 'center center',
