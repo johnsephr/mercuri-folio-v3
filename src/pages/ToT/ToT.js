@@ -14,6 +14,29 @@ import hiFiIcons from "../../assets/images/ToT/hifi-icons.jpg";
 import socialPost from "../../assets/images/ToT/previewsocialpost.jpg";
 import previewInsta from "../../assets/images/ToT/preview-insta.jpeg";
 
+// image data payload
+const dataOverlapRL = {
+    imageL: {
+      image: loFiIcons,
+      subtext: 'initial sketch'
+    },
+    imageR: {
+      image: hiFiIcons,
+      subtext: 'lookbook'
+    }
+}
+
+const dataSideBySide = {
+    imageL: {
+      image: socialPost,
+      subtext: 'see post here'
+    },
+    imageR: {
+      image: previewInsta,
+      subtext: 'see instagram here'
+    }
+}
+
 const ToT = props => {
   const { data } = props;
   const { next, nextText } = data;
@@ -33,10 +56,10 @@ const ToT = props => {
       <div style={{
         marginLeft: 'auto',
         marginRight: 'auto',
-        padding: '8rem',
+        padding: '6rem',
         maxWidth: '1050px'
       }}>
-        <OverlapRL imageL={loFiIcons} imageR={hiFiIcons} />
+        <OverlapRL data={dataOverlapRL} />
 
         <p style={{ margin: '5rem 0' }}>
           <span className="font-bold"><a href="https://tunneloftrees.co/" target="_blank" rel="noreferrer">Tunnel of Trees</a></span> describes their existence as, <span className="italic">“a music blog dedicated to taking music and turning it into a serious
@@ -49,7 +72,7 @@ const ToT = props => {
           the bold new era and visual edge.
         </p>
 
-        <SideBySide imageL={socialPost} imageR={previewInsta} />
+        <SideBySide data={dataSideBySide} />
       </div>
 
       {/* FooterNav */}

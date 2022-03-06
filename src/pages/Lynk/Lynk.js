@@ -11,8 +11,32 @@ import FooterNav from "../../components/FooterNav";
 // imgs
 import lynk_sketch from '../../assets/images/lynk/lynk_sketch.jpg'
 import lynk_laptop from '../../assets/images/lynk/lynk_laptop.png'
-import lynk_guide from '../../assets/images/lynk/lynk_guide.jpg'
-import lynk_banner_copy from '../../assets/images/lynk/lynk_copy.jpg'
+import lynk_guide from '../../assets/images/lynk/lynk_guide.png'
+import lynk_landing_draft from '../../assets/images/lynk/lynk_landing_draft.jpg'
+
+// image data payload
+const dataOverlapRL = {
+  imageL: {
+    image: lynk_sketch,
+    subtext: 'initial sketch'
+  },
+  imageR: {
+    image: lynk_guide,
+    subtext: 'guidelines'
+  }
+}
+
+const dataOverlapLR = {
+  imageL: {
+    image: lynk_laptop,
+    subtext: 'prototype'
+  },
+  imageR: {
+    image: lynk_landing_draft,
+    subtext: 'landing draft'
+  }
+}
+
 
 const Lynk = props => {
   const { data } = props;
@@ -33,11 +57,11 @@ const Lynk = props => {
       <div style={{
         marginLeft: 'auto',
         marginRight: 'auto',
-        padding: '8rem',
+        padding: '6rem',
         maxWidth: '1050px'
       }}>
 
-        <OverlapRL imageL={lynk_sketch} imageR={lynk_guide} />
+        <OverlapRL data={dataOverlapRL} />
 
         <p style={{ margin: '5rem 0' }}>
           ‘LYNK’ was created to be an imaginary visual and marketing creative agency.
@@ -49,7 +73,7 @@ const Lynk = props => {
           A design/brand guideline was created to fully flesh out the company idea besides a mock website.
         </p>
 
-        <OverlapLR imageL={lynk_laptop} imageR={lynk_banner_copy} />
+        <OverlapLR lynkHorizontal data={dataOverlapLR} />
       </div>
 
       {/* FooterNav */}
