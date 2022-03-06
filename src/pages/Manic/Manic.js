@@ -16,6 +16,7 @@ const Manic = props => {
         <LandingContainer
           logoVariant="dark"
           starVariant="dark"
+          arrowVariant="dark"
         >
           <ManicBanner />
         </LandingContainer>

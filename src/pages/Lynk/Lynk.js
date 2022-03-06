@@ -23,6 +23,7 @@ const Lynk = props => {
         <LandingContainer
           logoVariant="light"
           starVariant="light"
+          arrowVariant="light"
         >
           <LynkBanner />
         </LandingContainer>

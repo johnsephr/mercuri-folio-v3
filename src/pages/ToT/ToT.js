@@ -23,6 +23,7 @@ const ToT = props => {
         <LandingContainer
           logoVariant="dark"
           starVariant="dark"
+          arrowVariant="light"
         >
           <ToTBanner />
         </LandingContainer>

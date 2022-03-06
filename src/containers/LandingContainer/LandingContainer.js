@@ -13,7 +13,7 @@ import starDark from '../../assets/icons/star/darkstar.svg'
 import starLight from '../../assets/icons/star/lightstar.svg'
 
 const LandingContainer = props => {
-    const { logoVariant, starVariant, aboutPage } = props;
+    const { logoVariant, starVariant, arrowVariant, aboutPage } = props;
     return (
         <div className='flex flex-col h-screen root-paddings relative'>
             {/* navbar */}
@@ -42,7 +42,7 @@ const LandingContainer = props => {
             </div>
 
         {/* scroll arrow */}
-        <ArrowIcon dark={logoVariant === 'dark' ? true : false} className="absolute bottom-0 left-0" />
+        <ArrowIcon dark={arrowVariant === 'dark' ? true : false} className="absolute bottom-0 left-0" />
         </div>
     );
 }

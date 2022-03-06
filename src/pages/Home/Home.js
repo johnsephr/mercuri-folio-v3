@@ -16,6 +16,7 @@ const Home = () => {
         <LandingContainer
           logoVariant="dark"
           starVariant="dark"
+          arrowVariant="dark"
           style={{ zIndex: 2 }}
         >
           <HomeBanner />

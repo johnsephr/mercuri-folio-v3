@@ -16,6 +16,7 @@ const Forgive = props => {
         <LandingContainer
           logoVariant="dark"
           starVariant="dark"
+          arrowVariant="light"
         >
           <ForgiveBanner />
         </LandingContainer>
