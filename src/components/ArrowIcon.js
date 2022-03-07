@@ -22,7 +22,7 @@ const ArrowIcon = props => {
                     height: '3rem',
                     position: 'absolute',
                     left: '5vw',
-                    bottom: '5vw',
+                    bottom: '25%',
                 }}
                 alt='Arrow Icon'
             />
