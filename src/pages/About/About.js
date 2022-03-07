@@ -4,8 +4,8 @@ import React from "react";
 import RootBannerContainer from "../../containers/RootBannerContainer";
 import LandingContainer from "../../containers/LandingContainer/LandingContainer";
 import Modal from '../../components/Modal';
-import Footer from '../../components/Footer';
 
+// images
 import aboutImg from '../../assets/images/aboutimage.jpg'
 
 const About = () => {
@@ -18,7 +18,7 @@ const About = () => {
           aboutPage
         >
           {/* page content */}
-          <div className='flex justify-center items-center w-full h-full'>
+          <div className='flex justify-center items-center w-full h-full pt-10'>
             <div style={{
               width: '60%',
             }}>
@@ -49,7 +49,6 @@ const About = () => {
           </div>
         </LandingContainer>
       </RootBannerContainer>
-      <Footer />
     </div>
   );
 }

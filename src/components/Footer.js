@@ -6,13 +6,14 @@ import { FaInstagram, FaLinkedin, FaBehance } from 'react-icons/fa';
 // star icon
 import starDark from '../assets/icons/star/darkstar.svg';
 
-const Footer = () => {
+const Footer = props => {
+    const { about } = props;
     const [hoverIG, setHoverIG] = useState(false);
     const [hoverLI, setHoverLI] = useState(false);
     const [hoverBH, setHoverBH] = useState(false);
 
     return (
-        <div className="bg-footer-grey text-footer-icon-grey h-40 absolute bottom-0 w-screen flex flex-col">
+        <div className={`${about ? 'absolute bottom-0' : ''} bg-footer-grey text-footer-icon-grey h-40 w-screen flex flex-col`}>
             {/* links/icons */}
             <div className="flex justify-between inline-block mx-auto my-6">
                 {/* instagram */}

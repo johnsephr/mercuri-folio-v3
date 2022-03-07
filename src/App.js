@@ -14,6 +14,9 @@ import Manic from './pages/Manic/Manic'
 import Lynk from './pages/Lynk/Lynk'
 import ToT from './pages/ToT/ToT'
 
+// footer
+import Footer from './components/Footer';
+
 // HOC
 import ScrollToTop from '../src/HOCs/ScrollToTop';
 
@@ -28,21 +31,27 @@ function App() {
         <Switch>
           <Route path="/tot">
             <ToT data={tot} />
+            <Footer />
           </Route>
           <Route path="/forgive">
             <Forgive data={forgive} />
+            <Footer />
           </Route>
           <Route path="/lynk">
             <Lynk data={lynk} />
+            <Footer />
           </Route>
           <Route path="/manic">
             <Manic data={manic} />
+            <Footer />
           </Route>
           <Route path="/about">
             <About />
+            <Footer about />
           </Route>
           <Route path="/">
             <Home />
+            <Footer />
           </Route>
         </Switch>
       </ScrollToTop>
