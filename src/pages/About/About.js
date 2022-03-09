@@ -6,7 +6,7 @@ import LandingContainer from "../../containers/LandingContainer/LandingContainer
 import Modal from '../../components/Modal';
 
 // images
-import aboutImg from '../../assets/images/aboutimage.jpg'
+import aboutImg from '../../assets/images/aboutimage.png'
 
 const About = () => {
   return (
@@ -22,12 +22,12 @@ const About = () => {
             <div style={{
               width: '60%',
             }}>
-              <div className='flex py-5' style={{
+              <div className='flex py-8' style={{
                 borderTop: '1px solid #333',
                 borderBottom: '1px solid #333',
               }}>
-                <img className='w-1/2' src={aboutImg} alt="michelle" />
-                <div className='w-1/2 pl-8 flex justify-between flex-col'>
+                <img className='w-1/2 pr-5' src={aboutImg} alt="michelle" />
+                <div className='w-1/2 pl-5 flex justify-between flex-col'>
                   <p className='italic text-xl'>About</p>
                   <p className='text-2xl'>Hello, I'm Michelle.</p>
                   <p className='text-2xl'>

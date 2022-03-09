@@ -15,7 +15,7 @@ import starLight from '../../assets/icons/star/lightstar.svg'
 const LandingContainer = props => {
     const { logoVariant, starVariant, arrowVariant, aboutPage } = props;
     return (
-        <div className='flex flex-col h-screen root-paddings relative'>
+        <div className='flex flex-col h-screen root-paddings'>
             {/* navbar */}
             <div className='w-full flex justify-between pt-8'>
                 {/* logo */}

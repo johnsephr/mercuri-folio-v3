@@ -13,7 +13,7 @@ const Footer = props => {
     const [hoverBH, setHoverBH] = useState(false);
 
     return (
-        <div className={`${about ? 'absolute bottom-0' : ''} bg-footer-grey text-footer-icon-grey h-40 w-screen flex flex-col`}>
+        <div className={`${about ? 'absolute bottom-0' : ''} bg-footer-grey text-footer-icon-grey h-36 w-screen flex flex-col`}>
             {/* links/icons */}
             <div className="flex justify-between inline-block mx-auto my-6">
                 {/* instagram */}
