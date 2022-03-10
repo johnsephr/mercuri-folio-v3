@@ -44,7 +44,7 @@ const About = () => {
                 </div>
               </div>
               {/* button here */}
-              <Modal />
+              {/* <Modal /> */}
             </div>
           </div>
         </LandingContainer>
