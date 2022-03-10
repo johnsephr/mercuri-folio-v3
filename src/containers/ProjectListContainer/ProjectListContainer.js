@@ -10,7 +10,7 @@ const ProjectListContainer = props => {
     const inactiveHoverHandler = () => setHover(-1);
 
     return (
-        <div className="grid grid-cols-2 gap-8 m-auto w-4/5" style={{marginBottom: '2.25rem'}}>
+        <div className="grid grid-cols-2 gap-8 m-auto w-4/5" style={{marginBottom: '8rem'}}>
             {projectList.map((project, index) => {
                 const { projectUrl, name, url } = project;
                 return <div
