@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { useMediaPredicate } from "react-media-hook";
 
 // icons
 import darkArrow from '../assets/icons/arrow/darkarrow.svg';
@@ -6,6 +7,8 @@ import lightArrow from '../assets/icons/arrow/lightarrow.svg';
 
 const ArrowIcon = props => {
     const { next, prev, dark } = props;
+    const smallerThan617 = useMediaPredicate("(max-width: 617px)");
+
     return (
         <Fragment>
             <img
@@ -19,7 +22,7 @@ const ArrowIcon = props => {
                     height: '3rem'
                 } : {
                     transform: 'rotate(0deg)',
-                    height: '3rem',
+                    height: smallerThan617 ? '2.25rem' : '3rem',
                     position: 'absolute',
                     left: '5vw',
                     bottom: '25%',

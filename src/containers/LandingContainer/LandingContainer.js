@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useMediaPredicate } from "react-media-hook";
 
 // file imports
 import ArrowIcon from '../../components/ArrowIcon';
@@ -14,6 +15,8 @@ import starLight from '../../assets/icons/star/lightstar.svg'
 
 const LandingContainer = props => {
     const { logoVariant, starVariant, arrowVariant, aboutPage } = props;
+    const smallerThan617 = useMediaPredicate("(max-width: 617px)");
+
     return (
         <div className='flex flex-col h-screen root-paddings'>
             {/* navbar */}
@@ -21,16 +24,16 @@ const LandingContainer = props => {
                 {/* logo */}
                 <Link to='/'>
                     <img
-                        // className='pl-12'
                         src={logoVariant === 'dark' ? customLogoDark : customLogoLight}
                         alt="Michelle Gorski's custom logo"
+                        style={smallerThan617 ? { height: '5rem' } : {}}
                     />
                 </Link>
                 {/* star */}
                 <img
-                    // className=''
                     src={starVariant === 'dark' ? starDark : starLight}
                     alt='Northern star icon'
+                    style={smallerThan617 ? { height: '2rem', margin: 'auto' } : { margin: 'auto'}}
                 />
                 {/* about link */}
                 <div className='flex items-center'><Link className='text-xl' style={logoVariant === 'light' ? { color: '#fff' } : {}} to='/about'>About</Link></div>
@@ -41,8 +44,8 @@ const LandingContainer = props => {
                 {props.children}
             </div>
 
-        {/* scroll arrow */}
-        <ArrowIcon dark={arrowVariant === 'dark' ? true : false} className="absolute bottom-0 left-0" />
+            {/* scroll arrow */}
+            <ArrowIcon dark={arrowVariant === 'dark' ? true : false} className="absolute bottom-0 left-0" />
         </div>
     );
 }
