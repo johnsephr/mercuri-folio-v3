@@ -1,16 +1,19 @@
 import React, { useState, Fragment } from "react";
 import { Link } from "react-router-dom";
+import { useMediaPredicate } from "react-media-hook";
 
 import projectList from "../../data/projectListData";
 
 const ProjectListContainer = props => {
     const [hover, setHover] = useState(-1);
+    const smallerThan900 = useMediaPredicate("(max-width: 900px");
+    const smallerThan500 = useMediaPredicate("(max-width: 500px");
 
     const activeHoverHandler = (index) => setHover(index);
     const inactiveHoverHandler = () => setHover(-1);
 
     return (
-        <div className="grid grid-cols-2 gap-8 m-auto w-4/5" style={{marginBottom: '8rem'}}>
+        <div className={`${smallerThan500 ? '' : 'm-auto'} ${smallerThan900 ? '' : 'grid grid-cols-2 gap-8 w-4/5'}`} style={{marginBottom: '8rem'}}>
             {projectList.map((project, index) => {
                 const { projectUrl, name, url } = project;
                 return <div
@@ -19,8 +22,9 @@ const ProjectListContainer = props => {
                     style={{
                         backgroundPosition: 'center center',
                         backgroundSize: 'cover',
-                        height: '30vw',
-                        width: '30vw',
+                        height: smallerThan500 ? '80vw' : smallerThan900 ? '60vw' : '30vw',
+                        width: smallerThan500 ? '80vw' : smallerThan900 ? '60vw' : '30vw',
+                        margin: smallerThan900 ? '5rem auto' : 'auto',
                     }}
                     onMouseLeave={inactiveHoverHandler}
                     onMouseEnter={() => activeHoverHandler(index)}
