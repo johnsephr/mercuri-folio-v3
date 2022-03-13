@@ -20,7 +20,7 @@ const projectList = [
         imgUrl: '../assets/images/landings/lynk.jpg',
         url: '/lynk',
         bannerUrl: 'bg-landing-lynk',
-        projectUrl: 'bg-project-lynk',
+        projectUrl: 'bg-landing-lynk',
         roles: ['Concept Development'],
     },
     {
@@ -28,7 +28,7 @@ const projectList = [
         imgUrl: '../assets/images/landings/manic.png',
         url: '/manic',
         bannerUrl: 'bg-landing-manic',
-        projectUrl: 'bg-project-manic',
+        projectUrl: 'bg-landing-manic',
         roles: ['Concept Development'],
     },
 ]

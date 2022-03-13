@@ -1,6 +1,7 @@
 import React, { useState, Fragment } from "react";
 import { Link } from "react-router-dom";
 import { useMediaPredicate } from "react-media-hook";
+import {isMobile} from 'react-device-detect';
 
 import projectList from "../../data/projectListData";
 
@@ -21,7 +22,7 @@ const ProjectListContainer = props => {
                     className={`${projectUrl} flex justify-self-center`}
                     style={{
                         backgroundPosition: 'center center',
-                        backgroundSize: 'cover',
+                        backgroundSize: url === '/manic' ? '105% 105%' : 'cover',
                         height: smallerThan500 ? '80vw' : smallerThan900 ? '60vw' : '30vw',
                         width: smallerThan500 ? '80vw' : smallerThan900 ? '60vw' : '30vw',
                         margin: smallerThan900 ? '5rem auto' : 'auto',
@@ -30,7 +31,7 @@ const ProjectListContainer = props => {
                     onMouseEnter={() => activeHoverHandler(index)}
                 >
 
-                    {hover === index ? <div className="w-full z-50" style={{backgroundColor: 'rgba(0, 0, 0, .3)'}}>
+                    {isMobile || hover === index ? <div className="w-full z-50" style={{backgroundColor: 'rgba(0, 0, 0, .3)'}}>
                         <Link className="h-full w-full flex" to={url}>
                             <h1 className="m-auto inline-block text-2xl" style={{color: 'white'}}>{name}</h1>
                         </Link>

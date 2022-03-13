@@ -14,8 +14,8 @@ const Forgive = props => {
     <div>
       <RootBannerContainer forgive={true}>
         <LandingContainer
-          logoVariant="dark"
-          starVariant="dark"
+          logoVariant="light"
+          starVariant="light"
           arrowVariant="light"
         >
           <ForgiveBanner />

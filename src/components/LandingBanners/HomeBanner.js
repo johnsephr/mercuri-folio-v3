@@ -11,7 +11,9 @@ const HomeBanner = () => {
 
   return (
     <div className="h-full w-full grid pt-12">
-      <p className={`${smallerThan500 ? 'text-base' : 'text-xl'} text-left row-span-1 w-full`}>Hello,</p>
+      <div className="row-span-1 w-full flex flex-col justify-center">
+        <p className={`${smallerThan500 ? 'text-base' : 'text-xl'} text-left`}>Hello,</p>
+      </div>
       <div className="width-full flex justify-center row-span-2">
         <h1 className={`${smallerThan372 ? 'text-base' :
           smallerThan411 ? 'text-lg' :

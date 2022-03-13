@@ -7,8 +7,6 @@ import HomeBanner from "../../components/LandingBanners/HomeBanner";
 
 import ProjectListContainer from "../../containers/ProjectListContainer/ProjectListContainer";
 
-// import homeLandingImage from "../../assets/images/landings/tot.png"
-
 const Home = () => {
   return (
     <div>
@@ -24,7 +22,6 @@ const Home = () => {
 
         <ProjectListContainer />
       </RootBannerContainer>
-      {/* rest of page content here... */}
     </div>
   );
 }
