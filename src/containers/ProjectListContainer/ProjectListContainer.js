@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from "react";
 import { Link } from "react-router-dom";
 import { useMediaPredicate } from "react-media-hook";
-import {isMobile} from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
 
 import projectList from "../../data/projectListData";
 

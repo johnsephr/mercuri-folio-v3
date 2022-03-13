@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { isMobile } from 'react-device-detect';
 
 // react icons
 import { FaInstagram, FaLinkedin, FaBehance } from 'react-icons/fa';
@@ -32,7 +33,7 @@ const Footer = props => {
                     href='https://www.linkedin.com/in/michelle-gorski-78a5b9179/'
                     target="_blank"
                     rel="noreferrer"
-                    className={`px-8 text-3xl ${hoverLI ? 'text-footer-icon-grey-hover' : ''}`}
+                    className={`${isMobile ? 'px-16' : 'px-8'} text-3xl ${hoverLI ? 'text-footer-icon-grey-hover' : ''}`}
                     onMouseEnter={() => setHoverLI(true)}
                     onMouseLeave={() => setHoverLI(false)}
                 >
