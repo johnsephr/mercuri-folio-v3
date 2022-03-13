@@ -12,7 +12,7 @@ const RootBannerContainer = props => {
         paddingLeft: '5vw',
         paddingRight: '5vw',
         backgroundPosition: 'center center',
-        backgroundSize: '105% 105%'
+        backgroundSize: 'auto 105%'
       } : {
         paddingLeft: '5vw',
         paddingRight: '5vw',
