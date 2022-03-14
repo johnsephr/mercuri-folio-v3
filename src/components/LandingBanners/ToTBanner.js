@@ -21,11 +21,13 @@ const ToTBanner = () => {
                 ${smallerThan414 ? 'pl-0' :
           smallerThan683 ? 'pl-8' :
             smallerThan867 ? 'pl-12' : 'pl-24'} text-left row-span-2`} style={{ color: 'white' }}>
+
+        {/* roles */}
         <div className={`${smallerThan867 ? 'text-base' : smallerThan1116 ? 'text-lg' : 'text-xl'} text-left italic pb-5`} style={{ color: 'white' }}>
           <span>Creative Direction</span>
-          <hr className={`${smallerThan618 ? 'w-2' : smallerThan683 ? 'w-5' : 'w-10'} h-1 bg-black inline-block mx-1`} />
+          {smallerThan618 ? <br /> : <hr className={`${smallerThan618 ? 'w-2' : smallerThan683 ? 'w-5' : 'w-10'} h-1 bg-black inline-block mx-1`} />}
           <span>Branding Identity</span>
-          <hr className={`${smallerThan618 ? 'w-2' : smallerThan683 ? 'w-5' : 'w-10'} h-1 bg-black inline-block mx-1`} />
+          {smallerThan618 ? <br /> : <hr className={`${smallerThan618 ? 'w-2' : smallerThan683 ? 'w-5' : 'w-10'} h-1 bg-black inline-block mx-1`} />}
           <span>Design System</span>
         </div>
 
