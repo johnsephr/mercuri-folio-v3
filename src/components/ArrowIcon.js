@@ -7,6 +7,7 @@ import lightArrow from '../assets/icons/arrow/lightarrow.svg';
 
 const ArrowIcon = props => {
     const { next, prev, dark } = props;
+    const smallerThan1000 = useMediaPredicate("(max-width: 1000px)");
     const smallerThan617 = useMediaPredicate("(max-width: 617px)");
 
     return (
@@ -16,10 +17,10 @@ const ArrowIcon = props => {
                 src={dark ? darkArrow : lightArrow}
                 style={next ? {
                     transform: 'rotate(270deg)',
-                    height: '3rem'
+                    height: smallerThan617 ? '2.25rem' : smallerThan1000 ? '2.6rem' : '3rem',
                 } : prev ? {
                     transform: 'rotate(90deg)',
-                    height: '3rem'
+                    height: smallerThan617 ? '2.25rem' : smallerThan1000 ? '2.6rem' : '3rem',
                 } : {
                     transform: 'rotate(0deg)',
                     height: smallerThan617 ? '2.25rem' : '3rem',
