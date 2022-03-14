@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaPredicate } from "react-media-hook";
 
 // file imports
 import RootBannerContainer from "../../containers/RootBannerContainer";
@@ -16,30 +17,35 @@ import previewInsta from "../../assets/images/ToT/preview-insta.jpeg";
 
 // image data payload
 const dataOverlapRL = {
-    imageL: {
-      image: loFiIcons,
-      subtext: 'initial sketch'
-    },
-    imageR: {
-      image: hiFiIcons,
-      subtext: 'lookbook'
-    }
+  imageL: {
+    image: loFiIcons,
+    subtext: 'initial sketch'
+  },
+  imageR: {
+    image: hiFiIcons,
+    subtext: 'lookbook'
+  }
 }
 
 const dataSideBySide = {
-    imageL: {
-      image: socialPost,
-      subtext: 'see post here'
-    },
-    imageR: {
-      image: previewInsta,
-      subtext: 'see instagram here'
-    }
+  imageL: {
+    image: socialPost,
+    subtext: 'see post here',
+    link: 'https://www.instagram.com/p/CN23l-onL5F/?utm_medium=share_sheet'
+  },
+  imageR: {
+    image: previewInsta,
+    subtext: 'see instagram here',
+    link: 'https://www.instagram.com/treetunnels/'
+  }
 }
 
 const ToT = props => {
   const { data } = props;
   const { next, nextText } = data;
+  const smallerThan515 = useMediaPredicate("(max-width: 515px)");
+  const smallerThan680 = useMediaPredicate("(max-width: 680px)");
+  const smallerThan1200 = useMediaPredicate("(max-width: 1200px)");
   return (
     <div>
       <RootBannerContainer tot={true}>
@@ -56,10 +62,15 @@ const ToT = props => {
       <div style={{
         marginLeft: 'auto',
         marginRight: 'auto',
-        padding: '6rem',
+        padding: smallerThan680 ? '6rem 3rem' : '6rem',
         maxWidth: '1050px'
       }}>
-        <OverlapRL data={dataOverlapRL} />
+
+        {/* lookbook img */}
+        <div style={smallerThan680 ? { width: '100%' } : { height: '50vh' }}>
+          <img src={hiFiIcons} className={`${smallerThan680 ? 'w-full' : 'h-full'} mx-auto`} />
+          <p className="italic text-center text-image-subtext mt-3">lookbook</p>
+        </div>
 
         <p style={{ margin: '5rem 0' }}>
           <span className="font-bold"><a href="https://tunneloftrees.co/" target="_blank" rel="noreferrer">Tunnel of Trees</a></span> describes their existence as, <span className="italic">“a music blog dedicated to taking music and turning it into a serious
@@ -72,7 +83,17 @@ const ToT = props => {
           the bold new era and visual edge.
         </p>
 
-        <SideBySide data={dataSideBySide} />
+        {smallerThan1200 ? <div>
+          <div className="mb-24" style={smallerThan515 ? { height: '30vh' } : { height: '50vh' }}>
+            <img src={dataSideBySide.imageR.image} className={`${smallerThan515 ? 'h-full' : 'h-full'} mx-auto`} />
+            <p className="italic text-center text-image-subtext mt-3"><a className="underline" href={dataSideBySide.imageR.link}>{dataSideBySide.imageR.subtext}</a></p>
+          </div>
+          <div style={smallerThan515 ? { height: '30vh' } : { height: '50vh' }}>
+            <img src={dataSideBySide.imageL.image} className={`${smallerThan515 ? 'h-full' : 'h-full'} mx-auto`} />
+            <p className="italic text-center text-image-subtext mt-3"><a className="underline" href={dataSideBySide.imageL.link}>{dataSideBySide.imageL.subtext}</a></p>
+          </div>
+        </div> : <SideBySide data={dataSideBySide} links />}
+
       </div>
 
       {/* FooterNav */}
