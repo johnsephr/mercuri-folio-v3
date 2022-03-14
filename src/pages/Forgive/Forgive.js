@@ -26,7 +26,7 @@ const Forgive = props => {
       <div style={{
         marginLeft: 'auto',
         marginRight: 'auto',
-        padding: '4rem 0',
+        padding: '3rem 0',
         maxWidth: '1050px'
       }}>
         <ForgiveListContainer />
