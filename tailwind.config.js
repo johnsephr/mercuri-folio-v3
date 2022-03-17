@@ -19,6 +19,7 @@ module.exports = {
       'footer-icon-grey': '#636363',
       'footer-icon-grey-hover': '#2C2828',
       'image-subtext': '#5A5A5A',
+      'mercuri-black': '#0A0A0A'
     }
   },
   variants: {

@@ -1,11 +1,10 @@
 import React from "react";
+import { useMediaPredicate } from "react-media-hook";
 
 // file imports
 import RootBannerContainer from "../../containers/RootBannerContainer";
 import LandingContainer from "../../containers/LandingContainer/LandingContainer";
 import LynkBanner from "../../components/LandingBanners/LynkBanner";
-import OverlapRL from "../../containers/ImageContainer/OverlapRL";
-import OverlapLR from "../../containers/ImageContainer/OverlapLR";
 import FooterNav from "../../components/FooterNav";
 
 // imgs
@@ -41,13 +40,17 @@ const dataOverlapLR = {
 const Lynk = props => {
   const { data } = props;
   const { next, prev, nextText, prevText } = data;
+  const smallerThan925 = useMediaPredicate("(max-width: 925px)");
+  const smallerThan680 = useMediaPredicate("(max-width: 680px)");
+  const smallerThan550 = useMediaPredicate("(max-width: 550px)");
+
   return (
     <div>
       <RootBannerContainer lynk={true}>
         <LandingContainer
-          logoVariant="light"
-          starVariant="light"
-          arrowVariant="light"
+          logoVariant="dark"
+          starVariant="dark"
+          arrowVariant="dark"
         >
           <LynkBanner />
         </LandingContainer>
@@ -57,11 +60,15 @@ const Lynk = props => {
       <div style={{
         marginLeft: 'auto',
         marginRight: 'auto',
-        padding: '6rem',
+        padding: smallerThan550 ? '3rem' : '6rem',
         maxWidth: '1050px'
       }}>
 
-        <OverlapRL data={dataOverlapRL} />
+        {/* lynk guide img */}
+        <div style={smallerThan680 ? { width: '100%' } : { height: '50vh' }}>
+          <img src={lynk_guide} className={`${smallerThan680 ? 'w-full' : 'h-full'} mx-auto`} />
+          <p className="italic text-center text-image-subtext mt-3">guidelines</p>
+        </div>
 
         <p style={{ margin: '5rem 0' }}>
           ‘LYNK’ was created to be an imaginary visual and marketing creative agency.
@@ -73,7 +80,11 @@ const Lynk = props => {
           A design/brand guideline was created to fully flesh out the company idea besides a mock website.
         </p>
 
-        <OverlapLR lynkHorizontal data={dataOverlapLR} />
+        {/* lynk landing draft img */}
+        <div style={smallerThan925 ? { width: '100%' } : { height: '50vh' }}>
+          <img src={lynk_landing_draft} className={`${smallerThan680 ? 'w-full' : 'h-full'} mx-auto`} />
+          <p className="italic text-center text-image-subtext mt-3">landing draft</p>
+        </div>
       </div>
 
       {/* FooterNav */}
