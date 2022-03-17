@@ -26,7 +26,7 @@ const About = () => {
   const smallerThan280 = useMediaPredicate("(max-width: 280px)");
 
   return (
-    <div className={`${smallerThan525 ? 'h-screen flex flex-col' : ''}`}>
+    <div className={`${smallerThan525 ? 'flex flex-col' : ''}`}>
       <RootBannerContainer>
         <LandingContainer
           logoVariant="dark"
