@@ -31,7 +31,7 @@ const ProjectListContainer = props => {
                     onMouseEnter={() => activeHoverHandler(index)}
                 >
 
-                    {!isMobile || hover === index ? <div className="w-full z-50" style={{backgroundColor: 'rgba(0, 0, 0, .3)'}}>
+                    {isMobile || hover === index ? <div className="w-full z-50" style={{backgroundColor: 'rgba(0, 0, 0, .3)'}}>
                         <Link className="h-full w-full flex" to={url}>
                             <h1 className="m-auto inline-block text-2xl" style={{color: 'white'}}>{name}</h1>
                         </Link>
