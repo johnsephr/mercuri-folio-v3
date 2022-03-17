@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { useMediaPredicate } from "react-media-hook";
 
@@ -14,7 +14,7 @@ import starDark from '../../assets/icons/star/darkstar.svg'
 import starLight from '../../assets/icons/star/lightstar.svg'
 
 const LandingContainer = props => {
-    const { logoVariant, starVariant, arrowVariant, aboutPage } = props;
+    const { logoVariant, starVariant, arrowVariant, aboutPage, homePage } = props;
     const smallerThan617 = useMediaPredicate("(max-width: 617px)");
 
     return (
@@ -30,13 +30,15 @@ const LandingContainer = props => {
                     />
                 </Link>
                 {/* star */}
-                <img
-                    src={starVariant === 'dark' ? starDark : starLight}
-                    alt='Northern star icon'
-                    style={smallerThan617 ? { height: '2rem', margin: 'auto' } : { margin: 'auto'}}
-                />
-                {/* about link */}
-                <div className='flex items-center'><Link className='text-xl' style={logoVariant === 'light' ? { color: '#fff' } : {}} to='/about'>About</Link></div>
+                {!homePage ? <Fragment /> : <Fragment>
+                    <img
+                        src={starVariant === 'dark' ? starDark : starLight}
+                        alt='Northern star icon'
+                        style={smallerThan617 ? { height: '2rem', margin: 'auto' } : { margin: 'auto' }}
+                    />
+                    {/* about link */}
+                    <div className='flex items-center'><Link className='text-xl' style={logoVariant === 'light' ? { color: '#fff' } : {}} to='/about'>About</Link></div>
+                </Fragment>}
             </div>
 
             {/* landing banner */}
