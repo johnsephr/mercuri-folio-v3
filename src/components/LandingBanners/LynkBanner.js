@@ -20,8 +20,8 @@ const LynkBanner = () => {
                 smallerThan1116 ? 'text-4xl' : 'text-5xl'} 
                 ${smallerThan414 ? 'pl-0' :
           smallerThan683 ? 'pl-8' :
-            smallerThan867 ? 'pl-12' : 'pl-24'} text-left row-span-2 mt-3`} style={{ color: 'black' }}>
-        <p className="text-xl text-left w-full italic pb-5" style={{ color: 'black' }}>Concept Development</p>
+            smallerThan867 ? 'pl-12' : 'pl-24'} text-left row-span-2 mt-3`}>
+        <p className="text-xl text-left w-full italic pb-5">Concept Development</p>
         <span className="font-bold">'Lynk'</span> is a branding concept of an<br />
         imaginary design studio in which their<br />
         personality is represented visually through<br />

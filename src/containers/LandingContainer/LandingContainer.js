@@ -18,7 +18,7 @@ const LandingContainer = props => {
     const smallerThan617 = useMediaPredicate("(max-width: 617px)");
 
     return (
-        <div className='flex flex-col h-screen root-paddings'>
+        <div className={`flex flex-col ${aboutPage ? '' : 'h-screen'} root-paddings`}>
             {/* navbar */}
             <div className='w-full flex justify-between pt-8'>
                 {/* logo */}

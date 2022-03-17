@@ -1,10 +1,11 @@
 import './App.css';
-import React from "react";
+import React, { Fragment } from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
+import { useMediaPredicate } from "react-media-hook";
 
 // Pages
 import Home from './pages/Home/Home'
@@ -25,6 +26,7 @@ import projectNavData from './data/projectNavData';
 
 function App() {
   const { tot, forgive, lynk, manic } = projectNavData;
+  const smallerThan525 = useMediaPredicate("(max-width: 525px)");
   return (
     <Router>
       <ScrollToTop>
@@ -47,7 +49,7 @@ function App() {
           </Route>
           <Route path="/about">
             <About />
-            <Footer about />
+            {smallerThan525 ? <Fragment /> : <Footer about />}
           </Route>
           <Route path="/">
             <Home />

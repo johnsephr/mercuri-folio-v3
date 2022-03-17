@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { isMobile } from 'react-device-detect';
+import { useMediaPredicate } from "react-media-hook";
 
 // react icons
 import { FaInstagram, FaLinkedin, FaBehance } from 'react-icons/fa';
@@ -12,9 +13,10 @@ const Footer = props => {
     const [hoverIG, setHoverIG] = useState(false);
     const [hoverLI, setHoverLI] = useState(false);
     const [hoverBH, setHoverBH] = useState(false);
+    const smallerThan525 = useMediaPredicate("(max-width: 525px)");
 
     return (
-        <div className={`${about ? 'absolute bottom-0' : ''} bg-footer-grey text-footer-icon-grey h-36 w-screen flex flex-col`}>
+        <div className={`${about && !smallerThan525 ? 'absolute bottom-0' : about && smallerThan525 ? 'mt-auto' : ''} bg-footer-grey text-footer-icon-grey h-36 w-screen flex flex-col`}>
             {/* links/icons */}
             <div className="flex justify-between inline-block mx-auto my-6">
                 {/* instagram */}
