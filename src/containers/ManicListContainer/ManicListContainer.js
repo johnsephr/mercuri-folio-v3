@@ -2,14 +2,16 @@ import React from "react";
 import { useMediaPredicate } from "react-media-hook";
 
 // images
-import manic_1 from '../../assets/images/posters/manic/manic_1.jpg'
-// import manic_2 from '../../assets/images/posters/manic/manic_2.jpg'
-import manic_3 from '../../assets/images/posters/manic/manic_3.jpg'
+import manic_1 from '../../assets/images/posters/manic/manic_1.jpg';
+// import manic_2 from '../../assets/images/posters/manic/manic_2.jpg';
+import manic_3 from '../../assets/images/posters/manic/manic_3.jpg';
+import manic_4 from '../../assets/images/posters/manic/manic_4.png';
 
 // imgArr
 const manicImgList = [
     { image: manic_1, text1: '"I HATE EVERYBODY" by ', text2: 'Halsey' },
-    { image: manic_3, text1: '"3am" by ', text2: 'Halsey' }
+    { image: manic_3, text1: '"3am" by ', text2: 'Halsey' },
+    { image: manic_4, text1: '"Without me" by ', text2: 'Halsey' }
 ]
 
 const ManicListContainer = props => {
@@ -20,7 +22,7 @@ const ManicListContainer = props => {
                 const { image, text1, text2 } = item;
                 return <div
                     className='px-16'
-                    style={smallerThan680 ? { width: '100%', margin: '4rem 0' } : { height: '50vh', margin: '4rem 0' }}
+                    style={smallerThan680 ? { width: '100%', margin: '4rem 0' } : { height: '65vh', margin: '4rem 0' }}
                     key={index}
                 >
                     <img src={image} className={`${smallerThan680 ? 'w-full' : 'h-full'} mx-auto`} alt="manic" />
