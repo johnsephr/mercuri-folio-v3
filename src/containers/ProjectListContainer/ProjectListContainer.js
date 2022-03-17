@@ -22,7 +22,7 @@ const ProjectListContainer = props => {
                     className={`${projectUrl} flex justify-self-center`}
                     style={{
                         backgroundPosition: 'center center',
-                        backgroundSize: url === '/manic' ? '105% 105%' : 'cover',
+                        backgroundSize: url === '/manic' || url === '/tot' ? '105% 105%' : 'cover',
                         height: smallerThan500 ? '80vw' : smallerThan900 ? '60vw' : '30vw',
                         width: smallerThan500 ? '80vw' : smallerThan900 ? '60vw' : '30vw',
                         margin: smallerThan900 ? '5rem auto' : 'auto',
