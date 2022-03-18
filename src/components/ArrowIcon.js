@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { useMediaPredicate } from "react-media-hook";
+import { isMobile } from 'react-device-detect';
 
 // icons
 import darkArrow from '../assets/icons/arrow/darkarrow.svg';
@@ -26,7 +27,7 @@ const ArrowIcon = props => {
                     height: smallerThan617 ? '2.25rem' : '3rem',
                     position: 'absolute',
                     left: '5vw',
-                    bottom: '25%',
+                    bottom: isMobile ? '10%' : '25%',
                 }}
                 alt='Arrow Icon'
             />

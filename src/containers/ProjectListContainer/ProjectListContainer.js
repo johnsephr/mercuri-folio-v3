@@ -14,7 +14,7 @@ const ProjectListContainer = props => {
     const inactiveHoverHandler = () => setHover(-1);
 
     return (
-        <div className={`${smallerThan500 ? '' : 'm-auto'} ${ isMobile || smallerThan900 ? '' : 'grid grid-cols-2 gap-8 w-4/5'}`} style={{ marginBottom: '8rem' }}>
+        <div className={`${isMobile || smallerThan500 ? '' : 'm-auto'} ${ isMobile || smallerThan900 ? '' : 'grid grid-cols-2 gap-8 w-4/5'}`} style={{ marginBottom: '8rem' }}>
             {projectList.map((project, index) => {
                 const { projectUrl, name, url } = project;
                 return <div
@@ -23,9 +23,9 @@ const ProjectListContainer = props => {
                     style={{
                         backgroundPosition: 'center center',
                         backgroundSize: url === '/manic' || url === '/tot' ? 'cover' : 'cover',
-                        height: smallerThan500 ? '80vw' : smallerThan900 ? '60vw' : '30vw',
-                        width: smallerThan500 ? '80vw' : smallerThan900 ? '60vw' : '30vw',
-                        margin: smallerThan900 ? '5rem auto' : 'auto',
+                        height: isMobile || smallerThan500 ? '80vw' : isMobile || smallerThan900 ? '60vw' : '30vw',
+                        width: isMobile || smallerThan500 ? '80vw' : isMobile || smallerThan900 ? '60vw' : '30vw',
+                        margin: isMobile || smallerThan900 ? '5rem auto' : 'auto',
                     }}
                     onMouseLeave={inactiveHoverHandler}
                     onMouseEnter={() => activeHoverHandler(index)}

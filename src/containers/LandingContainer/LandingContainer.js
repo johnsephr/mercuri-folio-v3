@@ -30,13 +30,14 @@ const LandingContainer = props => {
                     />
                 </Link>
                 {/* star */}
-                {!homePage ? <Fragment /> : <Fragment>
-                    <img
+                {/* {!homePage ? <Fragment /> : <Fragment> */}
+                {/* <img
                         src={starVariant === 'dark' ? starDark : starLight}
                         alt='Northern star icon'
                         style={smallerThan617 ? { height: '2rem', margin: 'auto' } : { margin: 'auto' }}
-                    />
-                    {/* about link */}
+                    /> */}
+                {/* about link */}
+                {!homePage ? <Fragment /> : <Fragment>
                     <div className='flex items-center'><Link className='text-xl' style={logoVariant === 'light' ? { color: '#fff' } : {}} to='/about'>About</Link></div>
                 </Fragment>}
             </div>
