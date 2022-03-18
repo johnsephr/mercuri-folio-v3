@@ -14,7 +14,7 @@ const ProjectListContainer = props => {
     const inactiveHoverHandler = () => setHover(-1);
 
     return (
-        <div className={`${smallerThan500 ? '' : 'm-auto'} ${smallerThan900 ? '' : 'grid grid-cols-2 gap-8 w-4/5'}`} style={{marginBottom: '8rem'}}>
+        <div className={`${smallerThan500 ? '' : 'm-auto'} ${ isMobile || smallerThan900 ? '' : 'grid grid-cols-2 gap-8 w-4/5'}`} style={{ marginBottom: '8rem' }}>
             {projectList.map((project, index) => {
                 const { projectUrl, name, url } = project;
                 return <div
@@ -30,10 +30,9 @@ const ProjectListContainer = props => {
                     onMouseLeave={inactiveHoverHandler}
                     onMouseEnter={() => activeHoverHandler(index)}
                 >
-
-                    {isMobile || hover === index ? <div className="w-full z-50" style={{backgroundColor: 'rgba(0, 0, 0, .3)'}}>
+                    {isMobile || hover === index ? <div className="w-full z-50" style={{ backgroundColor: 'rgba(0, 0, 0, .3)' }}>
                         <Link className="h-full w-full flex" to={url}>
-                            <h1 className="m-auto inline-block text-2xl" style={{color: 'white'}}>{name}</h1>
+                            <h1 className="m-auto inline-block text-2xl" style={{ color: 'white' }}>{name}</h1>
                         </Link>
                     </div> : <Fragment />}
                 </div>
