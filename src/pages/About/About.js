@@ -68,10 +68,10 @@ const About = () => {
                       visually.</span>
                   </p>
                   <p className={`${smallerThan1025 ? 'mt-1.5' : ''}`}>
-                    With over three years of experience <br />
-                    that spreads across brand identity, <br />
-                    visual communication, and <br />
-                    UI/UX.
+                    Over four years of experience <br />
+                    spreading across brand design and <br />
+                    visual communication comes a <br />
+                    Figma and ProCreate <span className="italic">wizard</span>.
                   </p>
                 </div>
               </div>
