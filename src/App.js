@@ -14,6 +14,7 @@ import Forgive from './pages/Forgive/Forgive'
 import Manic from './pages/Manic/Manic'
 import Lynk from './pages/Lynk/Lynk'
 import ToT from './pages/ToT/ToT'
+import BrandIdentity from './pages/BrandIdentity/BrandItentity';
 
 // footer
 import Footer from './components/Footer';
@@ -50,6 +51,10 @@ function App() {
           <Route path="/about">
             <About />
             {smallerThan525 ? <Fragment /> : <Footer about />}
+          </Route>
+          <Route path="/brand-identity">
+            <BrandIdentity />
+            {/* <Footer /> */}
           </Route>
           <Route path="/">
             <Home />
