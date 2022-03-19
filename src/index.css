@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 html {
-    background: #F8F8F8;
-    font-family: 'EB Garamond', serif;
-    color: #0A0A0A;
+    background: #f8f8f8;
+    font-family: "EB Garamond", serif;
+    color: #0a0a0a;
 }
 
 @layer utilities {
@@ -13,4 +13,4 @@ html {
         padding-left: 5vw;
         padding-right: 5vw;
     }
-  }
+}
