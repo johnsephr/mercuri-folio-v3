@@ -27,6 +27,7 @@ const BrandIdentity = () => {
         <div className="my-28">
           {/* roles */}
           <Roles rolesList={brandIdentityRolesListData} rolesVariant='dark' />
+          {/* project info */}
           <div className="w-3/5">
             <p className="italic mt-6 inline-block w-1/2">title of project:</p><p className="italic bold mt-6 inline-block w-1/2">due date:</p><br />
             <h1 className="text-5xl inline-block w-1/2">personal <span className="italic">identity</span></h1>
@@ -59,6 +60,8 @@ const BrandIdentity = () => {
           <img src={colorPalette} className="mx-auto" />
         </div>
 
+        {/* logo variants */}
+        
       </div>
     </div>
   );
