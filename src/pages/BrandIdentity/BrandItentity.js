@@ -13,6 +13,7 @@ import dueDate from '../../assets/images/brand-identity/due-date.png';
 import scribbledPortrait from '../../assets/images/brand-identity/scribbled-portrait.png';
 import darkStar from '../../assets/icons/star/darkstar.svg';
 import logoDisplay from '../../assets/images/brand-identity/logo-display.png';
+import colorPalette from '../../assets/images/brand-identity/color-palette.png';
 
 const BrandIdentity = () => {
   return (
@@ -23,7 +24,7 @@ const BrandIdentity = () => {
 
       <div style={{ margin: '0 10vw 0 10vw' }}>
         {/* page header */}
-        <div className="py-28">
+        <div className="my-28">
           {/* roles */}
           <Roles rolesList={brandIdentityRolesListData} rolesVariant='dark' />
           <div className="w-3/5">
@@ -49,7 +50,14 @@ const BrandIdentity = () => {
         </div>
 
         {/* logo display */}
+        <div className="w-full mt-16">
+          <img src={logoDisplay} className="mx-auto" />
+        </div>
 
+        {/* color palette */}
+        <div className="w-full mt-16">
+          <img src={colorPalette} className="mx-auto" />
+        </div>
 
       </div>
     </div>
