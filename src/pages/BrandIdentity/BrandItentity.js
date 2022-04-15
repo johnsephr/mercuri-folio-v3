@@ -4,6 +4,7 @@ import React from "react";
 import RootBannerContainer from "../../containers/RootBannerContainer";
 import Navbar from "../../components/Navbar";
 import Roles from "../../components/Roles";
+import LogoVariantsContainer from "../../containers/LogoVariantsContainer/LogoVariantsContainer";
 
 // data
 import brandIdentityRolesListData from '../../data/roles/brandIdentityRolesListData';
@@ -59,10 +60,10 @@ const BrandIdentity = () => {
         <div className="w-full mt-16">
           <img src={colorPalette} className="mx-auto" />
         </div>
-
-        {/* logo variants */}
-        
       </div>
+
+      {/* logo variants */}
+      <LogoVariantsContainer />
     </div>
   );
 }
